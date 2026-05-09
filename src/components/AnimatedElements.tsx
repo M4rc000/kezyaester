@@ -12,7 +12,7 @@ export function Typewriter({ texts, className = '', speed = 60, delayBetween = 2
   const [displayed, setDisplayed] = useState('')
   const [textIndex, setTextIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
   useEffect(() => {
     const current = texts[textIndex]
